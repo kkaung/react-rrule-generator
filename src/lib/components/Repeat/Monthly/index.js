@@ -30,9 +30,22 @@ const RepeatMonthly = ({
             name="repeat.monthly.interval"
             aria-label="Repeat monthly interval"
             className="form-control"
+            type="number"
             value={interval}
             onChange={numericalFieldHandler(handleChange)}
           />
+          <select
+            name="repeat.monthly.interval"
+            id={`${id}-interval`}
+            aria-label="Repeat monthly interval"
+            className="form-control"
+            value={interval}
+            onChange={handleChange}
+          >
+            { [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num,i)=> (
+              <option value={num}>{num}</option>
+            )) }
+          </select>
         </div>
         <div className="col-sm-1">
           month(s)
