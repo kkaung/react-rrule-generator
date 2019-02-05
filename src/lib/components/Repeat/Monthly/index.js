@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RepeatMonthlyOn from './On';
 import RepeatMonthlyOnThe from './OnThe';
-import numericalFieldHandler from '../../../utils/numericalFieldHandler';
+// import numericalFieldHandler from '../../../utils/numericalFieldHandler';
+import IntervalSelect from '../IntervalSelect';
 
 const RepeatMonthly = ({
   id,
@@ -25,27 +26,14 @@ const RepeatMonthly = ({
           every
         </div>
         <div className="col-sm-3">
-          <input
-            id={`${id}-interval`}
-            name="repeat.monthly.interval"
-            aria-label="Repeat monthly interval"
-            className="form-control"
-            type="number"
-            value={interval}
-            onChange={numericalFieldHandler(handleChange)}
-          />
-          <select
+          <IntervalSelect
             name="repeat.monthly.interval"
             id={`${id}-interval`}
-            aria-label="Repeat monthly interval"
-            className="form-control"
+            ariaLabel="Repeat monthly interval"
             value={interval}
             onChange={handleChange}
-          >
-            { [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num,i)=> (
-              <option value={num}>{num}</option>
-            )) }
-          </select>
+            numberOptions={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
+          />
         </div>
         <div className="col-sm-1">
           month(s)
