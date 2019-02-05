@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { toPairs } from 'lodash';
-import numericalFieldHandler from '../../../utils/numericalFieldHandler';
+import IntervalSelect from '../IntervalSelect';
 
 const RepeatWeekly = ({
   id,
@@ -24,13 +24,12 @@ const RepeatWeekly = ({
           every
         </div>
         <div className="col-sm-3">
-          <input
+          <IntervalSelect
             id={`${id}-interval`}
             name="repeat.weekly.interval"
-            aria-label="Repeat weekly interval"
-            className="form-control"
+            ariaLabel="Repeat weekly interval"
             value={interval}
-            onChange={numericalFieldHandler(handleChange)}
+            onChange={handleChange}
           />
         </div>
         <div className="col-sm-1">

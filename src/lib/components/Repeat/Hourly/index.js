@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import numericalFieldHandler from '../../../utils/numericalFieldHandler';
+import IntervalSelect from '../IntervalSelect';
 
 const RepeatHourly = ({
   id,
@@ -14,13 +14,13 @@ const RepeatHourly = ({
       every
     </div>
     <div className="col-sm-2">
-      <input
+      <IntervalSelect
         id={`${id}-interval`}
         name="repeat.hourly.interval"
-        aria-label="Repeat hourly interval"
-        className="form-control"
+        ariaLabel="Repeat hourly interval"
         value={interval}
-        onChange={numericalFieldHandler(handleChange)}
+        onChange={handleChange}
+        numberOptions={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]}
       />
     </div>
     <div className="col-sm-1">
