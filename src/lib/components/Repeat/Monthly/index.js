@@ -30,7 +30,7 @@ const RepeatMonthly = ({
             name="repeat.monthly.interval"
             aria-label="Repeat monthly interval"
             className="form-control"
-            value={interval || 1}
+            value={interval}
             onChange={numericalFieldHandler(handleChange)}
           />
         </div>
