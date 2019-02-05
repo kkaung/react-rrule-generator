@@ -3,7 +3,7 @@ const computeDailyInterval = (data, rruleObj) => {
     return data.repeat.daily.interval;
   }
 
-  return rruleObj.interval;
+  return rruleObj.interval || 1;
 };
 
 export default computeDailyInterval;

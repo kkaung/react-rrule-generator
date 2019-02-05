@@ -3,7 +3,7 @@ const computeMonthlyInterval = (data, rruleObj) => {
     return data.repeat.monthly.interval;
   }
 
-  return rruleObj.interval;
+  return rruleObj.interval || 1;
 };
 
 export default computeMonthlyInterval;
