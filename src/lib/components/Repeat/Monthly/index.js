@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RepeatMonthlyOn from './On';
 import RepeatMonthlyOnThe from './OnThe';
-// import numericalFieldHandler from '../../../utils/numericalFieldHandler';
 import IntervalSelect from '../IntervalSelect';
 
 const RepeatMonthly = ({
@@ -32,7 +31,6 @@ const RepeatMonthly = ({
             ariaLabel="Repeat monthly interval"
             value={interval}
             onChange={handleChange}
-            numberOptions={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
           />
         </div>
         <div className="col-sm-1">
