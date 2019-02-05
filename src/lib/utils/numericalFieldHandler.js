@@ -2,7 +2,7 @@ import { isNaN } from 'lodash';
 
 const numericalFieldHandler = callback => (event) => {
   // Convert input from a string to a number
-  const inputNumber = +event.target.value;
+  const inputNumber = parseInt(event.target.value, 10);
   // Check if is a number and is less than 1000
   if (isNaN(inputNumber) || inputNumber >= 1000) return;
 
