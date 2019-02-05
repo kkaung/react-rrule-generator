@@ -19,7 +19,7 @@ const RepeatDaily = ({
         name="repeat.daily.interval"
         aria-label="Repeat daily interval"
         className="form-control"
-        value={interval}
+        value={interval || 1}
         onChange={numericalFieldHandler(handleChange)}
       />
     </div>
