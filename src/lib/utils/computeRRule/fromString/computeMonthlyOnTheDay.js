@@ -1,5 +1,5 @@
 const computeMonthlyOnTheDay = (data, rruleObj) => {
-  if (rruleObj.bymonthday === -1) {
+  if (typeof rruleObj.bymonthday === 'number' && rruleObj.bymonthday < 0) {
     return 'Day';
   }
   if (rruleObj.freq !== 1 || !rruleObj.byweekday) {
