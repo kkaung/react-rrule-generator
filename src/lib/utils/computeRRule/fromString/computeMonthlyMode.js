@@ -3,6 +3,10 @@ const computeMonthlyMode = (data, rruleObj) => {
     return data.repeat.monthly.mode;
   }
 
+  if (rruleObj.bymonthday === -1) {
+    return 'on the';
+  }
+
   if (rruleObj.bymonthday) {
     return 'on';
   }
