@@ -1,10 +1,10 @@
-# React RRule Generator
+# React RRule Generator 2
 > Recurrence rules generator form built with React
 
 [![LICENSE](https://img.shields.io/npm/l/express.svg)](LICENSE)
 [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://npm-stat.com/charts.html?package=react-rrule-generator)
 
-![Screenshot](https://cdn.pbrd.co/images/H5ZyjgR.png)
+> This is a fork from [https://github.com/officeluv/react-rrule-generator](https://github.com/officeluv/react-rrule-generator) with the fix to favor `BYDAY`/`BYMONTHDAY` over `BYSETPOS`.
 
 ## Description
 
